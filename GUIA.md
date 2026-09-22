@@ -258,22 +258,3 @@ cd ../02-refactorizado
 > `02-refactorizado` dentro de `01-original`: fallará en 15 líneas, todas
 > `"Answer was corrent!!!!"` vs `"Answer was correct!!!!"` — es la
 > evidencia en vivo de que el golden master detecta el cambio real.
-
----
-
-## 5. Guion sugerido para el video (orden recomendado)
-
-1. **Intro (30s):** mostrar el repo, decir que no hay tests ni docs.
-2. **Code smells (2-3 min):** abrir `Game.java`, señalar 4-5 smells de la
-   tabla (recomendado: God Class, Primitive Obsession, duplicación,
-   `==` con Strings, nombre que miente en `didPlayerWin`).
-3. **Pruebas (2-3 min):** explicar por qué no se puede probar "lo
-   correcto" sino "lo actual" (golden master); mostrar el guion
-   determinista y correr `mvn test` sobre el original en verde.
-4. **Refactor paso a paso (5-8 min):** ir mostrando los pasos 1 a 9 de la
-   sección 3, corriendo `mvn test` después de cada uno o cada dos pasos.
-   El clímax narrativo es el paso 6: mostrar el diff vacío del refactor
-   estructural y luego el diff de 15 líneas del arreglo de bug.
-5. **Cierre (30s):** comparar tamaño/complejidad de `Game.java` antes y
-   después, y mencionar el bug de la caja de penalización que se decidió
-   documentar en vez de arreglar sin autorización.
